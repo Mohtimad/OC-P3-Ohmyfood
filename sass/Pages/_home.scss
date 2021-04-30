@@ -1,9 +1,6 @@
 
-
-$font-size_working-list: 1.2rem;
-
 .location {
-    height: $location--height;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,7 +12,6 @@ $font-size_working-list: 1.2rem;
         margin: 5px;
     }
 }
-
 .intro {
     padding: 45px 40px 20px 40px;
     display: flex;
@@ -24,23 +20,22 @@ $font-size_working-list: 1.2rem;
     text-align: center;
     background-color: $color-bg_2;
     h2 {
-        font-size: $section-title_font-size;
+        font-size: 1.2rem;
         margin: 0 15px 20px 15px;
     }
     a {
-        font-size: map-get($intro_link-btn, font-size);
-        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
         display: flex;
         justify-content: center;
         align-items: center;
-        width: map-get($intro_link-btn, width);
-        height: map-get($intro_link-btn, height);
-        margin: map-get($intro_link-btn, margin);
-        border-radius: map-get($intro_link-btn, border-radius);
+        margin: 20px;
+        font-size: 0.9rem;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        width: 220px;
+        height: 50px;
+        border-radius: 35px;
         color: $font-color_1;
     }
 }
-
 .working {
     padding: 50px 25px;
     h2 {
@@ -60,12 +55,13 @@ $font-size_working-list: 1.2rem;
             flex-direction: column;
         }
         li {
+            width: auto;
             counter-increment: numberList;
             position: relative;
             height: 70px;
             margin: 10px 0 10px 10px;
             padding-left: 15px;
-            font-size: $working-list--font-size;
+            font-size: 1.2rem;
             background-color: $color-bg_2;
             border-radius: 25px;
             display: flex;
@@ -85,8 +81,7 @@ $font-size_working-list: 1.2rem;
                 color: $font-color_1;
                 border-radius: 50%;
                 position: absolute;
-                left: -15px;
-                
+                left: -15px;                
             }
         }
     }
@@ -98,10 +93,10 @@ $font-size_working-list: 1.2rem;
     h2 {
         font-size: $section-title_font-size;
     }
-
     .container {
         margin: 20px 0 45px 0;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 }

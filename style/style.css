@@ -16,7 +16,6 @@ i {
   height: 15px;
 }
 
-/****************/
 header {
   height: 65px;
   display: flex;
@@ -61,6 +60,11 @@ footer i {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1), -2px -2px 15px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 600px) {
+  .card {
+    width: 49%;
+  }
 }
 .card__img-block {
   position: relative;
@@ -112,18 +116,18 @@ footer i {
   background-color: #F6F6F6;
 }
 .intro h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0 15px 20px 15px;
 }
 .intro a {
-  font-size: 0.9rem;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px;
+  font-size: 0.9rem;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   width: 220px;
   height: 50px;
-  margin: 20px;
   border-radius: 35px;
   color: #FFF;
 }
@@ -149,6 +153,7 @@ footer i {
   flex-direction: column;
 }
 .working__list li {
+  width: auto;
   counter-increment: numberList;
   position: relative;
   height: 70px;
@@ -188,6 +193,7 @@ footer i {
 .restaurant .container {
   margin: 20px 0 45px 0;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 

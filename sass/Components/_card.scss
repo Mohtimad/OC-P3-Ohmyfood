@@ -1,13 +1,16 @@
+$card-width: 100%;
+
 .card {
     margin-bottom: 20px;
     display: block;
-    width: 100%;
+    width: $card-width;
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 2px 2px 15px rgba($color: black, $alpha: .1), -2px -2px 15px rgba($color: black, $alpha: .1);
-
-
+    @include desktop-tablet-only{
+        width: 49%;
+    }
     &__img-block{
         position: relative;
         height: 70%;
