@@ -1,0 +1,10 @@
+header{
+    height: $header_height;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    h1 { // logo
+        font-family: $font-family_Shrikhand;
+    }
+}

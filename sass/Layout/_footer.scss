@@ -1,0 +1,25 @@
+footer {
+    padding: 30px 25px;
+    background-color: $footer_color-bg;
+    color: $font-color_1;
+    font-size: $footer_font-size;
+    > h3 {
+        font-family: $font-family_Shrikhand;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        margin: 10px 0;
+    }
+    a {
+        color: white;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    i {
+        margin-right: 15px;
+    }
+}
