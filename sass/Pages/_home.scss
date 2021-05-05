@@ -1,4 +1,3 @@
-
 .location {
     height: 50px;
     display: flex;
@@ -23,18 +22,6 @@
         font-size: 1.2rem;
         margin: 0 15px 20px 15px;
     }
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
-        font-size: 0.9rem;
-        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-        width: 220px;
-        height: 50px;
-        border-radius: 35px;
-        color: $font-color_1;
-    }
 }
 .working {
     padding: 50px 25px;
@@ -52,23 +39,28 @@
             counter-reset: numberList;
             width: 100%;
             display: flex;
+            justify-content: space-around;
             flex-direction: column;
+            @include desktop-only{
+                flex-direction: row; }           
         }
         li {
-            width: auto;
+            width: initial;
+            @include desktop-only{
+                width: 28%; } 
             counter-increment: numberList;
             position: relative;
             height: 70px;
-            margin: 10px 0 10px 10px;
-            padding-left: 15px;
+            margin: 10px 0;
+            padding: 0 15px;
             font-size: 1.2rem;
             background-color: $color-bg_2;
             border-radius: 25px;
             display: flex;
             align-items: center;
-            vertical-align: auto;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
             &::before {
+                position: absolute;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -80,7 +72,6 @@
                 background-color: $color-primary;
                 color: $font-color_1;
                 border-radius: 50%;
-                position: absolute;
                 left: -15px;                
             }
         }
@@ -98,5 +89,21 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    .card__img-block {
+        &--newOn {
+            &::before {
+                position: absolute;
+                top: 0px; right: 0px; left: auto;
+                content: "Nouveau";
+                margin: 15px;
+                padding: 5px 10px;
+                z-index: 1;
+                font-weight: bold;
+                color: darken($color-tertiary, 40%);
+                background-color: $color-tertiary;
+            }
+        }
     }
 }

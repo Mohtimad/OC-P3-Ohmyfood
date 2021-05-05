@@ -1,13 +1,15 @@
-@import "./Base/base";
-@import "./Base/typography";
+@import "./utils/variables";
+@import "./utils/maps";
+@import "./utils/mixins";
 
-@import "./Utils/variables";
-@import "./Utils/maps";
-@import "./Utils/mixins";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animations";
 
-@import "./Layout/header";
-@import "./Layout/footer";
+@import "./components/card";
+@import "./components/buttons";
 
-@import "./Components/card";
+@import "./layout/header";
+@import "./layout/footer";
 
-@import "./Pages/home";
+@import "./pages/home";
