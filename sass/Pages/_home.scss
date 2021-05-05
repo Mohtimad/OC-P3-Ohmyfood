@@ -45,13 +45,14 @@
                 flex-direction: row; }           
         }
         li {
+            cursor: pointer;
             width: initial;
             @include desktop-only{
                 width: 28%; } 
             counter-increment: numberList;
             position: relative;
             height: 70px;
-            margin: 10px 0;
+            margin: 10px 0 10px 15px;
             padding: 0 15px;
             font-size: 1.2rem;
             background-color: $color-bg_2;

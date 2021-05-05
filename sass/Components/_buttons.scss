@@ -1,16 +1,16 @@
-.intro {
-    a {
-        padding: 0 5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.9rem;
-        height: 50px;
-        color: $font-color_1;
-        overflow: hidden;
-        border-radius: 35px;
-        margin: 20px;
-        background: linear-gradient(to top left, $color-primary, $color-secondary);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    }
+.btn {
+    width: max-content;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    height: 50px;
+    color: $font-color_1;
+    overflow: hidden;
+    border-radius: 35px;
+    margin: 20px;
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+

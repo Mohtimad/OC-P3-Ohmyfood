@@ -1,26 +1,24 @@
-.intro { 
-    a { // button "Explorer nos restaurants"
-        position: relative;
-        transition: transform 200ms, box-shadow 300ms;
-        &:hover {
-            transform: scale(1.01);
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            &::before {
-                opacity: .10;
-            }
-        } 
+.btn { 
+    position: relative;
+    transition: transform 200ms, box-shadow 300ms;
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         &::before {
-            content: "";
-            transition: opacity 200ms;
-            position: absolute;
-            top: 0px; right: 0px; bottom: 0px; left: 0px;
-            background-color: #FFF;
-            opacity: 0;
+            opacity: .10;
         }
+    } 
+    &::before {
+        content: "";
+        transition: opacity 200ms;
+        position: absolute;
+        top: 0px; right: 0px; bottom: 0px; left: 0px;
+        background-color: #FFF;
+        opacity: 0;
     }
 }
 
-.working__list {
+.working__list { //home
     li {
         transition: background-color 150ms, box-shadow 150ms, color 150ms;
         &:hover {
@@ -34,7 +32,7 @@
     }
 }
 
-.card {
+.card { //home
     margin-bottom: 20px;
     display: block;
     width: 100%;
@@ -48,28 +46,32 @@
     }
 }
 
-.card__info { //like button
-    .fa-heart {
-        position: relative;
-        &:hover{
-            &::after {
-                opacity: 0;
-            }
-        }
+.fa-heart { //like button
+    position: relative;
+    &:hover{
+        transition: opacity 200ms ease-in-out;
         &::after {
-            align-self: center;
-            transition: opacity 400ms ease-in-out;
-            background-color: #FFF;
-            position: absolute;
-            top: 0px; right: 0px; bottom: 0px; left: 0px;
-            content: "\f004";
-            opacity: 1;
+            opacity: 0;
         }
         &::before {
-            font-weight: 600;
-            background: linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            opacity: 1;
         }
+    }
+    &::after {
+        opacity: 1;
+        font-weight: 100;
+        align-self: center;
+        transition: opacity 400ms ease-in;
+        position: absolute;
+        top: 0px; right: 0px; bottom: 0px; left: 0px;
+        content: "\f004";
+    }
+    &::before {
+        opacity: 0;
+        background: linear-gradient( $color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 400ms ease-out;
+        font-weight: 600;
     }
 }
