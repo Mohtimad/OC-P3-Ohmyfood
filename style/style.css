@@ -23,6 +23,93 @@ i {
   height: 15px;
 }
 
+.loading-spinner {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 10;
+  animation: hide-spinner 4s forwards;
+}
+.loading-spinner__circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-left: 10px solid #9356DC;
+  border-bottom: 10px solid #9356DC;
+  border-right: 10px solid #9356DC;
+  border-top: 10px transparent solid;
+  top: 50%;
+  left: 50%;
+  margin: -60px 0 0 -60px;
+  border-radius: 50%;
+  animation: animate1 3s ease-in-out;
+}
+.loading-spinner__circle::before {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  content: "";
+  margin: 10px;
+  border-left: 10px solid #FF79DA;
+  border-bottom: 10px solid #FF79DA;
+  border-right: 10px solid #FF79DA;
+  border-top: 10px transparent solid;
+  border-radius: inherit;
+  animation: animate2 3s ease-in-out;
+}
+.loading-spinner__circle::after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  content: "";
+  margin: 35px;
+  border-left: 10px solid #99E2D0;
+  border-bottom: 10px solid #99E2D0;
+  border-right: 10px solid #99E2D0;
+  border-top: 10px transparent solid;
+  border-radius: inherit;
+  animation: animate3 3s ease-in-out;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(3turn);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(-6turn);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(3turn);
+  }
+}
+@keyframes hide-spinner {
+  75% {
+    opacity: 0.9;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
 .btn {
   position: relative;
   transition: transform 200ms, box-shadow 300ms;
@@ -121,8 +208,8 @@ i {
   animation-delay: 1s;
 }
 .menu-list li {
-  animation: opacity-list 1000ms forwards;
   opacity: 0;
+  animation: opacity-list 1000ms forwards;
 }
 .menu-list li .check-circle {
   width: 0;
@@ -133,7 +220,7 @@ i {
   transition: transform 300ms ease-in-out;
 }
 .menu-list li:hover .check-circle {
-  width: 60px;
+  width: 80px;
 }
 .menu-list li:hover i {
   transform: rotate(180deg);
@@ -376,6 +463,7 @@ footer i {
 }
 .restaurant .card__img-block--newOn::before {
   position: absolute;
+  border-radius: 2px;
   top: 0px;
   right: 0px;
   left: auto;

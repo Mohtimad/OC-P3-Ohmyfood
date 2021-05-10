@@ -96,6 +96,7 @@
         &--newOn {
             &::before {
                 position: absolute;
+                border-radius: 2px;
                 top: 0px; right: 0px; left: auto;
                 content: "Nouveau";
                 margin: 15px;
