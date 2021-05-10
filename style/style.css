@@ -105,6 +105,48 @@ i {
   font-weight: 600;
 }
 
+.menu-list :nth-child(1n) {
+  animation-delay: 0.2s;
+}
+.menu-list :nth-child(2n) {
+  animation-delay: 0.4s;
+}
+.menu-list :nth-child(3n) {
+  animation-delay: 0.6s;
+}
+.menu-list :nth-child(4n) {
+  animation-delay: 0.8s;
+}
+.menu-list :nth-child(5n) {
+  animation-delay: 1s;
+}
+.menu-list li {
+  animation: opacity-list 1000ms forwards;
+  opacity: 0;
+}
+.menu-list li .check-circle {
+  width: 0;
+  transform: rotate(-180deg);
+  transition: width 300ms ease-out;
+}
+.menu-list li .check-circle i {
+  transition: transform 300ms ease-in-out;
+}
+.menu-list li:hover .check-circle {
+  width: 60px;
+}
+.menu-list li:hover i {
+  transform: rotate(180deg);
+}
+@keyframes opacity-list {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .card {
   margin-bottom: 20px;
   display: block;
@@ -187,6 +229,7 @@ header .arrow-link {
   justify-content: center;
   grid-area: a;
   margin-left: 20px;
+  width: max-content;
 }
 
 footer {
@@ -213,6 +256,20 @@ footer a:hover {
 }
 footer i {
   margin-right: 15px;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    padding-left: 60px;
+  }
+  footer h3 {
+    margin-right: 50px;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    margin-right: 50px;
+  }
 }
 
 .location {
@@ -332,7 +389,6 @@ footer i {
 }
 
 figure {
-  z-index: 0;
   position: relative;
   width: auto;
   height: 250px;
@@ -350,7 +406,6 @@ figure img {
   padding: 0 20px;
   overflow: hidden;
   background-color: #F6F6F6;
-  z-index: 1;
   position: relative;
   border-radius: 30px 30px 0 0;
 }
@@ -388,14 +443,17 @@ figure img {
 }
 
 .menu-list li {
+  overflow: hidden;
+  cursor: pointer;
   max-height: 60px;
   margin: 15px 0;
-  padding: 15px 20px;
+  padding: 15px 0 15px 20px;
   list-style: none;
   background-color: white;
   border-radius: 25px;
   display: grid;
-  grid-template-areas: "title title" "description price";
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas: "title title check-circle" "description price check-circle";
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 .menu-list li h3 {
@@ -407,11 +465,28 @@ figure img {
   grid-area: description;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-list li .price {
   grid-area: price;
   justify-self: end;
   font-weight: bold;
+  margin-right: 20px;
+}
+.menu-list li .check-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  margin: -15px 0;
+  grid-area: check-circle;
+  height: auto;
+  background-color: #99E2D0;
+}
+.menu-list li .check-circle i {
+  width: max-content;
+  height: max-content;
 }
 
 @media screen and (min-width: 1024px) {

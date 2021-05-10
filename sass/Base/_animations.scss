@@ -17,8 +17,7 @@
         opacity: 0;
     }
 }
-
-.working__list { //home
+.working__list { //index tutorial
     li {
         transition: background-color 150ms, box-shadow 150ms, color 150ms;
         &:hover {
@@ -31,8 +30,7 @@
         }
     }
 }
-
-.card { //home
+.card { // index cards
     margin-bottom: 20px;
     display: block;
     width: 100%;
@@ -45,7 +43,6 @@
         transform: scale(1.01);
     }
 }
-
 .fa-heart { //like button
     position: relative;
     &:hover{
@@ -73,5 +70,40 @@
         -webkit-text-fill-color: transparent;
         transition: opacity 400ms ease-out;
         font-weight: 600;
+    }
+}
+.menu-list { // items menu
+    @for $i from 1 through $max-items {
+        :nth-child(#{$i}n) {
+            animation-delay: #{$i * 0.2}s;
+        }
+    }
+    li { 
+        animation: opacity-list 1000ms forwards;
+        opacity: 0;
+        .check-circle { // animation check circle
+            width: 0;
+            transform: rotate(-180deg);
+            transition: width 300ms ease-out;
+            i {
+                transition: transform 300ms ease-in-out;
+            }
+        }
+        &:hover {
+            .check-circle{
+                width: 60px;
+            }
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    @keyframes opacity-list {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }

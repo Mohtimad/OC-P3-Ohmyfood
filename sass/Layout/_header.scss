@@ -4,7 +4,6 @@ header{
     grid-template-areas: "a b .";
     color: black;
     height: 65px;
-    
     h1 { // logo
         grid-area: b;
         justify-self: center;
@@ -18,5 +17,6 @@ header{
         justify-content: center;
         grid-area: a;
         margin-left: 20px;
+        width: max-content;
     }
 }
