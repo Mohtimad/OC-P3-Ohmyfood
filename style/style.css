@@ -37,48 +37,51 @@ i {
 }
 .loading-spinner__circle {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
   border-left: 10px solid #9356DC;
   border-bottom: 10px solid #9356DC;
   border-right: 10px solid #9356DC;
   border-top: 10px transparent solid;
-  top: 50%;
-  left: 50%;
-  margin: -60px 0 0 -60px;
   border-radius: 50%;
   animation: animate1 3s ease-in-out;
 }
 .loading-spinner__circle::before {
-  position: absolute;
-  width: 80px;
-  height: 80px;
   content: "";
-  margin: 10px;
+  position: absolute;
+  width: 66.6666666667px;
+  height: 66.6666666667px;
+  margin: 6.6666666667px;
   border-left: 10px solid #FF79DA;
   border-bottom: 10px solid #FF79DA;
   border-right: 10px solid #FF79DA;
   border-top: 10px transparent solid;
-  border-radius: inherit;
+  border-radius: 50%;
   animation: animate2 3s ease-in-out;
 }
 .loading-spinner__circle::after {
-  position: absolute;
-  width: 30px;
-  height: 30px;
   content: "";
-  margin: 35px;
+  position: absolute;
+  width: 33.3333333333px;
+  height: 33.3333333333px;
+  margin: 23.3333333333px;
   border-left: 10px solid #99E2D0;
   border-bottom: 10px solid #99E2D0;
   border-right: 10px solid #99E2D0;
   border-top: 10px transparent solid;
-  border-radius: inherit;
+  border-radius: 50%;
   animation: animate3 3s ease-in-out;
 }
 
 @keyframes animate1 {
   0% {
     transform: rotate(0turn);
+  }
+  95% {
+    transform: rotate(3.05turn);
   }
   100% {
     transform: rotate(3turn);
@@ -88,6 +91,9 @@ i {
   0% {
     transform: rotate(0turn);
   }
+  95% {
+    transform: rotate(-6.1turn);
+  }
   100% {
     transform: rotate(-6turn);
   }
@@ -96,18 +102,23 @@ i {
   0% {
     transform: rotate(0turn);
   }
+  95% {
+    transform: rotate(3.15turn);
+  }
   100% {
     transform: rotate(3turn);
   }
 }
 @keyframes hide-spinner {
+  0%, 99% {
+    z-index: 10;
+  }
   75% {
     opacity: 0.9;
-    z-index: 10;
   }
   100% {
     opacity: 0;
-    z-index: -2;
+    z-index: -10;
   }
 }
 .btn {
@@ -125,10 +136,10 @@ i {
   content: "";
   transition: opacity 200ms;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: #FFF;
   opacity: 0;
 }
@@ -177,15 +188,16 @@ i {
   align-self: center;
   transition: opacity 400ms ease-in;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   content: "";
 }
 .fa-heart::before {
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 400ms ease-out;
@@ -204,9 +216,6 @@ i {
 .menu-list :nth-child(4n) {
   animation-delay: 0.8s;
 }
-.menu-list :nth-child(5n) {
-  animation-delay: 1s;
-}
 .menu-list li {
   opacity: 0;
   animation: opacity-list 1000ms forwards;
@@ -220,7 +229,7 @@ i {
   transition: transform 300ms ease-in-out;
 }
 .menu-list li:hover .check-circle {
-  width: 80px;
+  width: 70px;
 }
 .menu-list li:hover i {
   transform: rotate(180deg);
@@ -464,8 +473,8 @@ footer i {
 .restaurant .card__img-block--newOn::before {
   position: absolute;
   border-radius: 2px;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   left: auto;
   content: "Nouveau";
   margin: 15px;
@@ -518,10 +527,10 @@ figure img {
 .menu-block__part h2::after {
   content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   bottom: -5px;
-  left: 0px;
+  left: 0;
   width: 40px;
   border-bottom: 4px solid #99E2D0;
 }

@@ -38,7 +38,7 @@ figure {
             &::after {
                 content: "";
                 position: absolute;
-                top: 0px; right: 0px; bottom: -5px; left: 0px;
+                top: 0; right: 0; bottom: -5px; left: 0;
                 width: 40px;
                 border-bottom: 4px solid $color-tertiary;
             }

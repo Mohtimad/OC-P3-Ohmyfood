@@ -1,3 +1,10 @@
+@mixin spinner-style($color: $color-primary) {
+    border-left: ($spinner-size / 10) solid $color;
+    border-bottom: ($spinner-size / 10) solid $color;
+    border-right: ($spinner-size / 10) solid $color;
+    border-top: ($spinner-size / 10) transparent solid;
+    border-radius: 50%;
+}
 .loading-spinner{
     content: "";
     position: fixed;
@@ -10,40 +17,28 @@
     animation: hide-spinner 4s forwards;
     &__circle{
         position: absolute;
-        width: 120px;
-        height: 120px;
-        border-left: 10px solid $color-primary;
-        border-bottom: 10px solid $color-primary;
-        border-right: 10px solid $color-primary;
-        border-top: 10px transparent solid;
         top: 50%; left: 50%;
-        margin: -60px 0 0 -60px;
-        border-radius: 50%;
+        width: $spinner-size;
+        height: $spinner-size;
+        margin: ($spinner-size / 2 - $spinner-size) 0 0 ($spinner-size / 2 - $spinner-size);
+        @include spinner-style ($color-primary);
         animation: animate1 3s ease-in-out;
         &::before {
-            position: absolute;
-            width: 80px;
-            height: 80px;
             content: "";
-            margin: 10px;
-            border-left: 10px solid $color-secondary;
-            border-bottom: 10px solid $color-secondary;
-            border-right: 10px solid $color-secondary;
-            border-top: 10px transparent solid;
-            border-radius: inherit;
+            position: absolute;
+            width: $spinner-size / 3 * 2;
+            height: $spinner-size / 3 * 2;
+            margin: ($spinner-size / 3 * 2) - ($spinner-size / 2) - ($spinner-size / 10) ;
+            @include spinner-style ($color-secondary);
             animation: animate2 3s ease-in-out;
         }
         &::after {
-            position: absolute;
-            width: 30px;
-            height: 30px;
             content: "";
-            margin: 35px;
-            border-left: 10px solid $color-tertiary;
-            border-bottom: 10px solid $color-tertiary;
-            border-right: 10px solid $color-tertiary;
-            border-top: 10px transparent solid;
-            border-radius: inherit;
+            position: absolute;
+            width: $spinner-size / 3;
+            height: $spinner-size / 3;
+            margin: ($spinner-size / 3 * 2) - ($spinner-size / 3) - ($spinner-size / 10) ;
+            @include spinner-style ($color-tertiary);
             animation: animate3 3s ease-in-out;
         }
     }
@@ -52,35 +47,33 @@
 @keyframes animate1 {
     0% {
         transform: rotate(0turn) ;
-    }
-    100% {
-        transform: rotate(3turn);
-    }
+    } 95% {
+        transform: rotate(3.05turn);
+    } 100% {
+        transform: rotate(3turn); }
 } 
 @keyframes animate2 {
     0% {
-        
         transform: rotate(0turn);
-    }
-    100% {
-        transform: rotate(-6turn) ;
-    }
+    } 95% {
+        transform: rotate(-6.1turn);
+    } 100% {
+        transform: rotate(-6turn) ; }
 } 
 @keyframes animate3 {
     0% {
         transform: rotate(0turn);
-    }
-    100% {
-        transform: rotate(3turn);
-    }
+    } 95% {
+        transform: rotate(3.15turn);
+    } 100% {
+        transform: rotate(3turn); }
 }
 @keyframes hide-spinner {
-    75% {
-        opacity: 0.9;
+    0%, 99% {
         z-index: 10;
-    }
-    100% {
+    } 75% {
+        opacity: 0.9;
+    } 100% {
         opacity: 0;
-        z-index: -2;
-    }
+        z-index: -10;}
 } 
