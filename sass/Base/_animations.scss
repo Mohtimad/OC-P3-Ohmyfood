@@ -17,7 +17,9 @@
         opacity: 0;
     }
 }
-.working__list { //index tutorial
+
+/* index tutorial */
+.working__list { 
     li {
         transition: background-color 150ms, box-shadow 150ms, color 150ms;
         &:hover {
@@ -30,7 +32,9 @@
         }
     }
 }
-.card { // index cards
+
+/* index cards */
+.card { 
     margin-bottom: 20px;
     display: block;
     width: 100%;
@@ -43,7 +47,9 @@
         transform: scale(1.01);
     }
 }
-.fa-heart { //like button
+
+/* like button */
+.fa-heart {
     position: relative;
     &:hover{
         transition: opacity 200ms ease-in-out;
@@ -73,7 +79,9 @@
         font-weight: 600;
     }
 }
-.menu-list { // items menu
+
+/* items menu */
+.menu-list { 
     @for $i from 1 through $max-items {
         :nth-child(#{$i}n) {
             animation-delay: #{$i * 0.2}s;
@@ -82,7 +90,7 @@
     li { 
         opacity: 0;
         animation: opacity-list 1000ms forwards;
-        .check-circle { // animation check circle
+        .check-circle { 
             width: 0;
             transform: rotate(-180deg);
             transition: width 300ms ease-out;

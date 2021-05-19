@@ -144,6 +144,7 @@ i {
   opacity: 0;
 }
 
+/* index tutorial */
 .working__list li {
   transition: background-color 150ms, box-shadow 150ms, color 150ms;
 }
@@ -156,6 +157,7 @@ i {
   transition: color 150ms;
 }
 
+/* index cards */
 .card {
   margin-bottom: 20px;
   display: block;
@@ -170,6 +172,7 @@ i {
   transform: scale(1.01);
 }
 
+/* like button */
 .fa-heart {
   position: relative;
 }
@@ -204,6 +207,7 @@ i {
   font-weight: 600;
 }
 
+/* items menu */
 .menu-list :nth-child(1n) {
   animation-delay: 0.2s;
 }
@@ -311,6 +315,7 @@ header {
   grid-template-areas: "a b .";
   color: black;
   height: 65px;
+  /* LOGO */
 }
 header h1 {
   grid-area: b;
