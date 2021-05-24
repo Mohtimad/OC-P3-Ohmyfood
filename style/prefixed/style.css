@@ -486,7 +486,7 @@ footer {
   color: #FFF;
   font-size: 1.2rem;
 }
-footer > h3 {
+footer > h2 {
   font-family: "Shrikhand", cursive;
   margin-bottom: 20px;
 }
@@ -509,7 +509,7 @@ footer i {
   footer {
     padding-left: 60px;
   }
-  footer h3 {
+  footer h2 {
     margin-right: 50px;
   }
   footer ul {
@@ -728,16 +728,16 @@ figure img {
   font-size: 1.5rem;
   margin-right: 15px;
 }
-.menu-block__title h1 {
+.menu-block__title h2 {
   font-family: "Shrikhand", cursive;
 }
-.menu-block__part h2 {
+.menu-block__part h3 {
   font-size: 1.2rem;
   position: relative;
   text-transform: uppercase;
   margin: 40px 0 25px 0;
 }
-.menu-block__part h2::after {
+.menu-block__part h3::after {
   content: "";
   position: absolute;
   top: 0;
@@ -768,7 +768,7 @@ figure img {
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
-.menu-list li h3 {
+.menu-list li h4 {
   grid-area: title;
   margin-bottom: 5px;
 }

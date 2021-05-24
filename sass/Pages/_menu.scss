@@ -25,12 +25,12 @@ figure {
             font-size: 1.5rem;
             margin-right: 15px;
         }
-        h1 {
+        h2 {
             font-family: $font-family_Shrikhand;
         }
     }
     &__part{
-        h2 {
+        h3 {
             font-size: 1.2rem;
             position: relative;
             text-transform: uppercase;
@@ -62,7 +62,7 @@ figure {
     grid-template-columns: 1fr auto auto;
     grid-template-areas: "title title check-circle" "description price check-circle";
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    h3 {
+    h4 {
         grid-area: title;
         margin-bottom: 5px;
     }
