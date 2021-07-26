@@ -1,5 +1,4 @@
-# thomasdamien_3_22042021
-Openclassrooms Projet3
+# Ohmyfood - Projet 03
 
 ## Objectif
 - Développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques.
